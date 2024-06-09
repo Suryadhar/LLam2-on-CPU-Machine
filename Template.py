@@ -1,9 +1,8 @@
 import os 
-from pathlib import path 
+from pathlib import Path 
 import logging 
 
-logging.basicConfig(level = logging.info , format= '[%(asctime)s]: %(message)s:')
-
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 list_of_files = [
     "src/__init__.py",
@@ -13,14 +12,12 @@ list_of_files = [
     "requirements.txt",
     "setup.py",
     "main.py",
-    "research/trials.ipynb",
-
-]
+    "research/trials.ipynb"]
 
 
-for file in list_of_files
+for file in list_of_files:
 
-    file = path(file)
+    file = Path(file)
     filedir,filename = os.path.split(file)
 
     if filedir != '':
@@ -34,7 +31,7 @@ for file in list_of_files
 
     else:
         logging.info(f"{file} is alredy existing") 
-        
-                   
+
+
 
 
